@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background3"
-    tools:context=".controleur.ListeRestoActivity">
+    tools:context=".controleur.DetailsResto">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -51,7 +51,7 @@
                 android:textSize="20dp" />
 
             <TextView
-                android:id="@+id/textViewType"
+                android:id="@+id/textViewTypeResto"
                 android:layout_width="136dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"

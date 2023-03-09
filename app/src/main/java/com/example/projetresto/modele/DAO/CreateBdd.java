@@ -1,7 +1,9 @@
 package com.example.projetresto.modele.DAO;
 
+import static com.example.projetresto.modele.DAO.StructureBDD.COL_ADRESSE_RESTO;
 import static com.example.projetresto.modele.DAO.StructureBDD.COL_ID_RESTO;
 import static com.example.projetresto.modele.DAO.StructureBDD.COL_NOM_RESTO;
+import static com.example.projetresto.modele.DAO.StructureBDD.COL_TYPE_RESTO;
 import static com.example.projetresto.modele.DAO.StructureBDD.COL_VILLE_RESTO;
 import static com.example.projetresto.modele.DAO.StructureBDD.TABLE_resto;
 
@@ -13,7 +15,8 @@ import android.database.sqlite.SQLiteOpenHelper;
     public class CreateBdd extends SQLiteOpenHelper {
 
         //requête de création de la table tlac
-        private static final String CREATE_TABLERESTO = "CREATE TABLE " + TABLE_resto + " ("+ COL_ID_RESTO +" INTEGER PRIMARY KEY AUTOINCREMENT,"+ COL_NOM_RESTO + " TEXT NOT NULL, " + COL_VILLE_RESTO + " TEXT NOT NULL);";
+        private static final String CREATE_TABLERESTO = "CREATE TABLE " + TABLE_resto + " ("+ COL_ID_RESTO +" INTEGER PRIMARY KEY AUTOINCREMENT,"+ COL_NOM_RESTO + " TEXT NOT NULL, " + COL_VILLE_RESTO + " TEXT NOT NULL, " + COL_TYPE_RESTO + " TEXT NOT NULL, " + COL_ADRESSE_RESTO + " TEXT NOT NULL );";
+
         //requête de création de la table treleve
 
         //constructeur paramétré

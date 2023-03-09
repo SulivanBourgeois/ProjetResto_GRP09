@@ -20,10 +20,10 @@ public class ListeRestoActivity extends AppCompatActivity {
         //on crée un objet java en correspondance avec l'élément graphique listViewInfosLacs
         ListView listViewInfosResto = findViewById(R.id.ListViewResto);
         //on crée un objet daolac
-        DAOResto lacBdd = new DAOResto(this);
-        lacBdd.open();
+        DAOResto restobdd = new DAOResto(this);
+        restobdd.open();
         //on récupère tous les lacs
-        Cursor c = lacBdd.getAll();
+        Cursor c = restobdd.getAll();
         // choix des colonnes à afficher enregistrer dans un tableaux de chaine de caractères nommé columns
         String[] columns = new String[]{StructureBDD.COL_NOM_RESTO, StructureBDD.COL_VILLE_RESTO};
         // tableau d'entiers nommé to correspondant à la liste des id des éléments graphiques correspondants dans lesquelles afficher les colonnes
