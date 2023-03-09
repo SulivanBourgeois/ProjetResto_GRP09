@@ -56,6 +56,12 @@ public class DAOResto extends DAOModele {
         return cursorToResto(c);
     }
 
+    public static Cursor getOneByNom() {
+        //problème avec les dates sans 0 devant 3/10 ne marche pas 03/10 fonctionne
+        String $sql = "SELECT * FROM tresto WHERE NomR='" + "'";
+        return db.rawQuery($sql, null);
+    }
+
 
     public static Cursor getAll() {
         return db.rawQuery("SELECT * FROM tresto ORDER BY NomR", null);
