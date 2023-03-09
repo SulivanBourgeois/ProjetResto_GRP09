@@ -1,8 +1,10 @@
 package com.example.projetresto.modele.DAO;
 
 
+import static com.example.projetresto.modele.DAO.StructureBDD.COL_ADRESSE_RESTO;
 import static com.example.projetresto.modele.DAO.StructureBDD.COL_ID_RESTO;
 import static com.example.projetresto.modele.DAO.StructureBDD.COL_NOM_RESTO;
+import static com.example.projetresto.modele.DAO.StructureBDD.COL_TYPE_RESTO;
 import static com.example.projetresto.modele.DAO.StructureBDD.COL_VILLE_RESTO;
 import static com.example.projetresto.modele.DAO.StructureBDD.TABLE_resto;
 
@@ -25,6 +27,8 @@ public class DAOResto extends DAOModele {
         //on lui ajoute une valeur associé à une clé (qui est le nom de la colonne où on veut mettre la valeur)
         values.put(COL_NOM_RESTO, unResto.getNomR());
         values.put(COL_VILLE_RESTO, unResto.getVilleR());
+        values.put(COL_TYPE_RESTO, unResto.getTypeRestoR());
+        values.put(COL_ADRESSE_RESTO, unResto.getAdresseRestoR());
         //on insère l'objet dans la BDD via le ContentValues
         return db.insert(TABLE_resto, null, values);
     }
@@ -35,10 +39,12 @@ public class DAOResto extends DAOModele {
             return null;
         //Sinon
         c.moveToFirst(); //on se place sur le premier élément
-        resto unResto = new resto(null, null); //On créé un lac
+        resto unResto = new resto(null, null, null, null); //On créé un lac
         //on lui affecte toutes les infos grâce aux infos contenues dans le Cursor
         unResto.setNomR(c.getString(2));
         unResto.setVilleR(c.getString(3));
+        unResto.setTypeRestoR(c.getString(4));
+        unResto.setAdresseRestoR(c.getString(5));
         c.close(); //On ferme le cursor
         return unResto; //On retourne le restp
 

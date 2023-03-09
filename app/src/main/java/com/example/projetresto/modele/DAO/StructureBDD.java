@@ -12,5 +12,9 @@ public class StructureBDD {
 
     public static final String COL_VILLE_RESTO = "villeR";
 
+    public static final String COL_TYPE_RESTO = "typeRestoR";
+
+    public static final String COL_ADRESSE_RESTO = "adresseRestoR";
+
 
 }

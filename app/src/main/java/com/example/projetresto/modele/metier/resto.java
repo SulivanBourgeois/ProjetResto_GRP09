@@ -5,10 +5,14 @@ public class resto {
 
     protected String nomR;
     protected String villeR;
+    protected String typeRestoR;
+    protected String adresseRestoR;
 
-    public resto(String nomR, String villeR) {
+    public resto(String nomR, String villeR, String typeRestoR, String adresseRestoR) {
         this.nomR = nomR;
         this.villeR = villeR;
+        this.typeRestoR = typeRestoR;
+        this.adresseRestoR = adresseRestoR;
     }
 
 
@@ -28,16 +32,21 @@ public class resto {
         this.villeR = villeR;
     }
 
+    public String getTypeRestoR() {
+        return typeRestoR;
+    }
 
+    public void setTypeRestoR(String typeRestoR) {
+        this.typeRestoR = typeRestoR;
+    }
 
+    public String getAdresseRestoR() {
+        return adresseRestoR;
+    }
 
-
-
-
-
-
-
-
+    public void setAdresseRestoR(String adresseRestoR) {
+        this.adresseRestoR = adresseRestoR;
+    }
 
 }
 
