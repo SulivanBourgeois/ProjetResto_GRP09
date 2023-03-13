@@ -16,6 +16,8 @@
         <activity android:name=".controleur.ListeRestoActivity"
             android:exported="false"/>
 
+        <activity android:name=".controleur.DetailsRestoActivity"
+            android:exported="false"/>
         <activity
             android:name=".controleur.MainActivity"
             android:exported="true" >

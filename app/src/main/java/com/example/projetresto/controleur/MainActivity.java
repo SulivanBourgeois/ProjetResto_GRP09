@@ -31,6 +31,7 @@ import com.example.projetresto.modele.metier.resto;
             Button btnListe = findViewById(R.id.buttonListe);
             Button btnContacter = findViewById(R.id.buttonContacter);
             Button btnConnecter = findViewById(R.id.buttonConnecter);
+            Button btnDetailsResto = findViewById(R.id.buttonListeDétails);
             //on va créer écouteur pour tous les boutons
             View.OnClickListener ecouteur = new View.OnClickListener() {
                 //on implémente la méthode onclick
@@ -50,6 +51,10 @@ import com.example.projetresto.modele.metier.resto;
                         case R.id.buttonConnecter:
                             Intent intent3 = new Intent(MainActivity.this, SeConnecterActivity.class);
                             startActivity(intent3);
+                            break;
+                        case R.id.buttonListeDétails:
+                            Intent intent4 = new Intent(MainActivity.this, DetailsRestoActivity.class);
+                            startActivity(intent4);
 
 
                             finish();
@@ -62,6 +67,7 @@ import com.example.projetresto.modele.metier.resto;
             btnListe.setOnClickListener(ecouteur);
             btnContacter.setOnClickListener(ecouteur);
             btnConnecter.setOnClickListener(ecouteur);
+            btnDetailsResto.setOnClickListener(ecouteur);
 
 
 

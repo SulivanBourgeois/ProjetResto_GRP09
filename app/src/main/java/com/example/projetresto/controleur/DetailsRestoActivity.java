@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
@@ -29,6 +30,7 @@ public class DetailsRestoActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_detail);
         Spinner spinnerAfficheResto = (Spinner) findViewById(R.id.spinnerSaisieResto);
         DAOResto restobdd = new DAOResto(this);
 
@@ -49,11 +51,9 @@ public class DetailsRestoActivity extends AppCompatActivity {
 
             spinnerAfficheResto.setAdapter(dataAdapterR);
 
-            spinnerAfficheResto.setOnItemClickListener(new AdapterView.OnItemSelectedListener() {
-
+            spinnerAfficheResto.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                 @Override
                 public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-
                     nomResto = valueOf(spinnerAfficheResto.getSelectedItem());
 
                     resto Resto = restobdd.getRestoByNom(nomResto);
@@ -63,9 +63,14 @@ public class DetailsRestoActivity extends AppCompatActivity {
                     adresseResto.setText("l'adresse du resto est :" + valueOf(Resto.getAdresseRestoR()));
                     TextView ville = findViewById(R.id.VilleResto);
                     ville.setText("la ville du Resto est :" + valueOf(Resto.getVilleR()));
+                }
+
+                @Override
+                public void onNothingSelected(AdapterView<?> adapterView) {
 
                 }
             }
+
 
             );
         }
