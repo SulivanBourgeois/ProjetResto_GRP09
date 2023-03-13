@@ -63,7 +63,7 @@
             android:layout_height="55dp"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="280dp"
-            android:text="Nous Contacter" />
+            android:text="Reservation" />
 
         <ImageView
             android:layout_width="400dp"

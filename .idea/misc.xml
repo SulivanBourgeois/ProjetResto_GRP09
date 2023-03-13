@@ -3,7 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/adminSLAM/Desktop/resto/app/src/main/res/layout/activity_detail.xml" value="0.25" />
+        <entry key="..\:/ProjetResto_GRP09/app/src/main/res/layout/activity_booking.xml" value="0.24583333333333332" />
+        <entry key="..\:/ProjetResto_GRP09/app/src/main/res/layout/activity_connexio.xml" value="0.24479166666666666" />
+        <entry key="..\:/ProjetResto_GRP09/app/src/main/res/layout/activity_detail.xml" value="0.25" />
+        <entry key="..\:/ProjetResto_GRP09/app/src/main/res/layout/activity_liste.xml" value="0.25" />
+        <entry key="..\:/ProjetResto_GRP09/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/ProjetResto_GRP09/app/src/main/res/layout/activity_sign_in.xml" value="0.24479166666666666" />
+        <entry key="..\:/Users/adminSLAM/Desktop/resto/app/src/main/res/layout/activity_detail.xml" value="0.1" />
         <entry key="..\:/Users/adminSLAM/Desktop/resto/app/src/main/res/layout/activity_liste.xml" value="0.22" />
       </map>
     </option>
