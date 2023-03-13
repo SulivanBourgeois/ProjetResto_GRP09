@@ -1,38 +1,73 @@
 package com.example.projetresto.controleur;
 
+import static java.lang.String.valueOf;
+
 import android.database.Cursor;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
+import android.widget.Spinner;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.projetresto.R;
 import com.example.projetresto.modele.DAO.DAOResto;
 import com.example.projetresto.modele.DAO.StructureBDD;
+import com.example.projetresto.modele.metier.resto;
+
+import java.util.ArrayList;
+
+
 
 public class DetailsRestoActivity extends AppCompatActivity {
+
+    String nomResto ="";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_detail);
-
-        //on crée un objet java en correspondance avec l'élément graphique listViewInfosLacs
-        ListView listViewInfosResto = findViewById(R.id.ListViewDetailResto);
-        //on crée un objet daolac
+        Spinner spinnerAfficheResto = (Spinner) findViewById(R.id.spinnerSaisieResto);
         DAOResto restobdd = new DAOResto(this);
-        restobdd.open();
-        //on récupère chacun
-        Cursor c = DAOResto.getOneByNom();
-        // choix des colonnes à afficher enregistrer dans un tableaux de chaine de caractères nommé columns
-        String[] columns = new String[]{StructureBDD.COL_NOM_RESTO, StructureBDD.COL_VILLE_RESTO, StructureBDD.COL_TYPE_RESTO};
-        // tableau d'entiers nommé to correspondant à la liste des id des éléments graphiques correspondants dans lesquelles afficher les colonnes
-        int[] to = new int[]{R.id.textViewNom, R.id.textViewVille, R.id.textViewTypeResto};
-        //modèle pour afficher les éléments dans une liste utilisant les données c avec les colonnes choisies columns et à mettre dans les éléments f=graphiques d'id contenu dans to
-        SimpleCursorAdapter dataAdapter = new SimpleCursorAdapter(this, R.layout.activity_detail, c, columns, to, 0);
 
-        //on attribue cet adapterView (ce type d'affichage) à la listeView
-        listViewInfosResto.setAdapter(dataAdapter);
+        Cursor c = DAOResto.getAll();
 
+        ArrayList<String> lesResto = new ArrayList();
+
+        if (c.moveToFirst()) {
+            if (c.getCount() != 0) {
+                while (!c.isAfterLast()) {
+                    lesResto.add(c.getString(1));
+                    c.moveToNext();
+                }
+            }
+            ArrayAdapter<String> dataAdapterR = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, lesResto);
+            dataAdapterR.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+
+            spinnerAfficheResto.setAdapter(dataAdapterR);
+
+            spinnerAfficheResto.setOnItemClickListener(new AdapterView.OnItemSelectedListener() {
+
+                @Override
+                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+
+                    nomResto = valueOf(spinnerAfficheResto.getSelectedItem());
+
+                    resto Resto = restobdd.getRestoByNom(nomResto);
+                    TextView typeResto = findViewById(R.id.TypeResto);
+                    typeResto.setText("le type du Resto est :" + valueOf(Resto.getTypeRestoR()));
+                    TextView adresseResto = findViewById(R.id.AdrResto);
+                    adresseResto.setText("l'adresse du resto est :" + valueOf(Resto.getAdresseRestoR()));
+                    TextView ville = findViewById(R.id.VilleResto);
+                    ville.setText("la ville du Resto est :" + valueOf(Resto.getVilleR()));
+
+                }
+            }
+
+            );
+        }
     }
 }

@@ -41,10 +41,10 @@ public class DAOResto extends DAOModele {
         c.moveToFirst(); //on se place sur le premier élément
         resto unResto = new resto(null, null, null, null); //On créé un lac
         //on lui affecte toutes les infos grâce aux infos contenues dans le Cursor
-        unResto.setNomR(c.getString(2));
-        unResto.setVilleR(c.getString(3));
-        unResto.setTypeRestoR(c.getString(4));
-        unResto.setAdresseRestoR(c.getString(5));
+        unResto.setNomR(c.getString(1));
+        unResto.setVilleR(c.getString(2));
+        unResto.setTypeRestoR(c.getString(3));
+        unResto.setAdresseRestoR(c.getString(4));
         c.close(); //On ferme le cursor
         return unResto; //On retourne le restp
 

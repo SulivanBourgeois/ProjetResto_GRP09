@@ -5,73 +5,55 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background3"
-    tools:context=".controleur.DetailsRestoActivity">
+    tools:context=".controleur.ListeRestoActivity">
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="match_parent"
-            android:layout_height="89dp"
-            android:layout_marginTop="10dp"
-            app:srcCompat="@drawable/logo" />
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/TitreDetailResto"
             android:layout_width="match_parent"
-            android:layout_height="41dp"
-            android:gravity="center"
-            android:text="Detail des restaurants"
-            android:textSize="20dp" />
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_weight="1"
+            android:text="DetailResto"
+            android:textSize ="25dp"
+            tools:ignore="MissingConstraints" />
 
-        <LinearLayout
+        <Spinner
+            android:id="@+id/spinnerSaisieResto"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/textViewNom"
-                android:layout_width="136dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="Nom"
-                android:textSize="20dp" />
-
-            <TextView
-                android:id="@+id/textViewVille"
-                android:layout_width="136dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="Ville"
-                android:textSize="20dp" />
-
-            <TextView
-                android:id="@+id/textViewTypeResto"
-                android:layout_width="136dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="Type de cuisine"
-                android:textSize="20dp" />
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            tools:ignore="MissingConstraints" />
 
 
-        </LinearLayout>
-
-        <LinearLayout
+        <TextView
+            android:id="@+id/VilleResto"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="VilleResto"
+            tools:ignore="MissingConstraints" />
 
-            <ListView
-                android:id="@+id/ListViewDetailResto"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-        </LinearLayout>
+        <TextView
+            android:id="@+id/TypeResto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="TypeResto"
+            tools:ignore="MissingConstraints" />
 
+        <TextView
+            android:id="@+id/AdrResto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="AdrResto"
+            tools:ignore="MissingConstraints" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
