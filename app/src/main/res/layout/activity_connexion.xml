@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background3"
-    tools:context=".controleur.ListeRestoActivity">
+    tools:context=".controleur.SeConnecterActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -40,7 +40,7 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:text="Name" />
+                android:text="E-mail" />
 
             <EditText
                 android:id="@+id/editTextTextPassword"
@@ -70,7 +70,7 @@
             <Button
                 android:layout_marginRight="10dp"
                 android:layout_marginLeft="5dp"
-                android:id="@+id/buttonQuitterSaisieTemp"
+                android:id="@+id/CreerCompte"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"

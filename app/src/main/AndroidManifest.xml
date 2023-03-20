@@ -17,6 +17,12 @@
             android:exported="false"/>
         <activity android:name=".controleur.DetailRestoActivity"
             android:exported="false"/>
+        <activity android:name=".controleur.ReservationActivity"
+            android:exported="false"/>
+        <activity android:name=".controleur.SeConnecterActivity"
+            android:exported="false"/>
+        <activity android:name=".controleur.SignInActivity"
+            android:exported="false"/>
 
 
         <activity

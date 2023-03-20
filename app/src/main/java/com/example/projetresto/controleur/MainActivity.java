@@ -29,8 +29,9 @@ import com.example.projetresto.modele.metier.resto;
 
             //on associe à un objet java de type Button, un widget repéré physiquement par son id
             Button btnListe = findViewById(R.id.buttonListe);
-            Button btnContacter = findViewById(R.id.buttonContacter);
+            Button btnContacter = findViewById(R.id.buttonBooking);
             Button btnConnecter = findViewById(R.id.buttonConnecter);
+            Button btnDetail = findViewById(R.id.buttonDetail);
             //on va créer écouteur pour tous les boutons
             View.OnClickListener ecouteur = new View.OnClickListener() {
                 //on implémente la méthode onclick
@@ -43,13 +44,17 @@ import com.example.projetresto.modele.metier.resto;
                             startActivity(intent1);
                             break;
 
-                        case R.id.buttonContacter:
-                            Intent intent2 = new Intent(MainActivity.this, NousContacterActivity.class);
+                        case R.id.buttonBooking:
+                            Intent intent2 = new Intent(MainActivity.this, ReservationActivity.class);
                             startActivity(intent2);
                             break;
                         case R.id.buttonConnecter:
                             Intent intent3 = new Intent(MainActivity.this, SeConnecterActivity.class);
                             startActivity(intent3);
+                            break;
+                        case R.id.buttonDetail:
+                            Intent intent4 = new Intent(MainActivity.this, DetailRestoActivity.class);
+                            startActivity(intent4);
 
 
                             finish();
@@ -62,6 +67,7 @@ import com.example.projetresto.modele.metier.resto;
             btnListe.setOnClickListener(ecouteur);
             btnContacter.setOnClickListener(ecouteur);
             btnConnecter.setOnClickListener(ecouteur);
+            btnDetail.setOnClickListener(ecouteur);
 
 
 
