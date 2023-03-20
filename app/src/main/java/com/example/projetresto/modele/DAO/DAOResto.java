@@ -2,7 +2,6 @@ package com.example.projetresto.modele.DAO;
 
 
 import static com.example.projetresto.modele.DAO.StructureBDD.COL_ADRESSE_RESTO;
-import static com.example.projetresto.modele.DAO.StructureBDD.COL_ID_RESTO;
 import static com.example.projetresto.modele.DAO.StructureBDD.COL_NOM_RESTO;
 import static com.example.projetresto.modele.DAO.StructureBDD.COL_TYPE_RESTO;
 import static com.example.projetresto.modele.DAO.StructureBDD.COL_VILLE_RESTO;
@@ -13,7 +12,6 @@ import android.content.Context;
 import android.database.Cursor;
 
 import com.example.projetresto.modele.metier.resto;
-import com.example.projetresto.modele.DAO.StructureBDD;
 
 public class DAOResto extends DAOModele {
 
@@ -68,5 +66,11 @@ public class DAOResto extends DAOModele {
     }
 
 
+    public boolean checkUser(String nom) {
+        return false;
+    }
+
+    public void addUser(String nom, String motDePasseTexte) {
+    }
 }
 

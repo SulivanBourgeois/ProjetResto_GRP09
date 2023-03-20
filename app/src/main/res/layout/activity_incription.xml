@@ -29,7 +29,7 @@
             android:textSize="20dp" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName2"
+            android:id="@+id/editTextEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -45,21 +45,7 @@
             android:text="Mot de passe" />
 
         <EditText
-            android:id="@+id/editTextTextPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPassword" />
-        <TextView
-            android:layout_marginTop="10dp"
-            android:id="@+id/textView2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="20dp"
-            android:text="Confirmation du mot de passe" />
-
-        <EditText
-            android:id="@+id/editTextTextPassword2"
+            android:id="@+id/editTextMotDePasse"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -74,7 +60,7 @@
             <Button
                 android:layout_marginRight="10dp"
                 android:layout_marginLeft="5dp"
-                android:id="@+id/buttonQuitterSaisieTemp"
+                android:id="@+id/buttonCreer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"

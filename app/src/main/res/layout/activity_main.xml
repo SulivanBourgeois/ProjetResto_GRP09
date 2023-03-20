@@ -33,7 +33,7 @@
             android:layout_height="55dp"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="360dp"
-            android:text="Se Connecter" />
+            android:text="Se Connecter ou S'inscrire" />
 
         <ImageView
             android:layout_width="400dp"
@@ -71,7 +71,7 @@
             android:layout_height="55dp"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="280dp"
-            android:text="Nous Contacter" />
+            android:text="Réservation" />
 
         <ImageView
             android:layout_width="400dp"
@@ -79,6 +79,14 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="410dp"
             app:srcCompat="@drawable/ic_baseline_remove_24" />
+
+        <Button
+            android:id="@+id/button_logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="130dp"
+            android:text="Déconnexion" />
 
 
     </RelativeLayout>

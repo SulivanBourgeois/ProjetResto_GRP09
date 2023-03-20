@@ -13,7 +13,8 @@ import com.example.projetresto.R;
 import com.example.projetresto.modele.DAO.DAOResto;
 import com.example.projetresto.modele.metier.resto;
 
-    public class MainActivity extends AppCompatActivity {
+
+public class MainActivity extends AppCompatActivity {
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +33,7 @@ import com.example.projetresto.modele.metier.resto;
             Button btnContacter = findViewById(R.id.buttonContacter);
             Button btnConnecter = findViewById(R.id.buttonConnecter);
             Button btnDetailsResto = findViewById(R.id.buttonListeDétails);
+            Button btnLogout = findViewById(R.id.button_logout);
             //on va créer écouteur pour tous les boutons
             View.OnClickListener ecouteur = new View.OnClickListener() {
                 //on implémente la méthode onclick
@@ -45,16 +47,20 @@ import com.example.projetresto.modele.metier.resto;
                             break;
 
                         case R.id.buttonContacter:
-                            Intent intent2 = new Intent(MainActivity.this, NousContacterActivity.class);
+                            Intent intent2 = new Intent(MainActivity.this, InscriptionActivity.class);
                             startActivity(intent2);
                             break;
                         case R.id.buttonConnecter:
-                            Intent intent3 = new Intent(MainActivity.this, SeConnecterActivity.class);
+                            Intent intent3 = new Intent(MainActivity.this, ConnexionActivity.class);
                             startActivity(intent3);
                             break;
                         case R.id.buttonListeDétails:
                             Intent intent4 = new Intent(MainActivity.this, DetailsRestoActivity.class);
                             startActivity(intent4);
+                            break;
+                        case R.id.button_logout:
+                            Intent intent5 = new Intent(MainActivity.this, ConnexionActivity.class);
+                            startActivity(intent5);
 
 
                             finish();
@@ -68,6 +74,7 @@ import com.example.projetresto.modele.metier.resto;
             btnContacter.setOnClickListener(ecouteur);
             btnConnecter.setOnClickListener(ecouteur);
             btnDetailsResto.setOnClickListener(ecouteur);
+            btnLogout.setOnClickListener(ecouteur);
 
 
 
