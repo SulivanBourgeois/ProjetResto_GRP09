@@ -14,6 +14,14 @@
         tools:layout_editor_absoluteX="-42dp"
         tools:layout_editor_absoluteY="-16dp">
 
+        <Button
+            android:id="@+id/buttonInscrire"
+            android:layout_width="300dp"
+            android:layout_height="55dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="550dp"
+            android:text="Inscription" />
+
         <ImageView
             android:layout_width="154dp"
             android:layout_height="99dp"
@@ -28,12 +36,12 @@
             app:srcCompat="@drawable/ic_baseline_remove_24" />
 
         <Button
-            android:id="@+id/buttonConnecter"
+            android:id="@+id/buttonConnecterOuInscrire"
             android:layout_width="300dp"
             android:layout_height="55dp"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="360dp"
-            android:text="Se Connecter ou S'inscrire" />
+            android:text="Se Connecter" />
 
         <ImageView
             android:layout_width="400dp"
@@ -66,7 +74,7 @@
             app:srcCompat="@drawable/ic_baseline_remove_24" />
 
         <Button
-            android:id="@+id/buttonContacter"
+            android:id="@+id/buttonRéservation"
             android:layout_width="300dp"
             android:layout_height="55dp"
             android:layout_centerHorizontal="true"
@@ -74,6 +82,14 @@
             android:text="Réservation" />
 
         <ImageView
+            android:layout_width="400dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="510dp"
+            app:srcCompat="@drawable/ic_baseline_remove_24" />
+
+        <ImageView
+            android:id="@+id/imageView2"
             android:layout_width="400dp"
             android:layout_height="40dp"
             android:layout_centerHorizontal="true"

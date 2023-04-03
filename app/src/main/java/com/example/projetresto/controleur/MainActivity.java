@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.projetresto.R;
 import com.example.projetresto.modele.DAO.DAOResto;
+import com.example.projetresto.modele.DAO.UtilisateurDAO;
 import com.example.projetresto.modele.metier.resto;
 
 
@@ -21,19 +22,23 @@ public class MainActivity extends AppCompatActivity {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_main);
 
-            DAOResto restoBdd = new DAOResto(this);
+            DAOResto restoBdd= new DAOResto(this);
+            UtilisateurDAO restoBddUtil = new UtilisateurDAO(this);
             restoBdd.open();
-            if (restoBdd.getAll().getCount() == 0) {
+            restoBddUtil.open();
+            if (restoBdd.getAllResto().getCount() == 0 ) {
                 //si la bdd est vide on remplit la table lac et la table releve avec des exemples
                 remplirTableResto();
             }
 
+
             //on associe à un objet java de type Button, un widget repéré physiquement par son id
             Button btnListe = findViewById(R.id.buttonListe);
-            Button btnContacter = findViewById(R.id.buttonContacter);
-            Button btnConnecter = findViewById(R.id.buttonConnecter);
+            Button btnRéservation = findViewById(R.id.buttonRéservation);
+            Button btnConnecter = findViewById(R.id.buttonConnecterOuInscrire);
             Button btnDetailsResto = findViewById(R.id.buttonListeDétails);
             Button btnLogout = findViewById(R.id.button_logout);
+            Button btnInscription = findViewById(R.id.buttonInscrire);
             //on va créer écouteur pour tous les boutons
             View.OnClickListener ecouteur = new View.OnClickListener() {
                 //on implémente la méthode onclick
@@ -46,11 +51,11 @@ public class MainActivity extends AppCompatActivity {
                             startActivity(intent1);
                             break;
 
-                        case R.id.buttonContacter:
-                            Intent intent2 = new Intent(MainActivity.this, InscriptionActivity.class);
+                        case R.id.buttonRéservation:
+                            Intent intent2 = new Intent(MainActivity.this, RéservationActivity.class);
                             startActivity(intent2);
                             break;
-                        case R.id.buttonConnecter:
+                        case R.id.buttonConnecterOuInscrire:
                             Intent intent3 = new Intent(MainActivity.this, ConnexionActivity.class);
                             startActivity(intent3);
                             break;
@@ -61,7 +66,10 @@ public class MainActivity extends AppCompatActivity {
                         case R.id.button_logout:
                             Intent intent5 = new Intent(MainActivity.this, ConnexionActivity.class);
                             startActivity(intent5);
-
+                            break;
+                        case R.id.buttonInscrire:
+                            Intent intent6 = new Intent(MainActivity.this, InscriptionActivity.class);
+                            startActivity(intent6);
 
                             finish();
                             break;
@@ -71,10 +79,11 @@ public class MainActivity extends AppCompatActivity {
             };
             //on affecte au bouton l'écouteur
             btnListe.setOnClickListener(ecouteur);
-            btnContacter.setOnClickListener(ecouteur);
+            btnRéservation.setOnClickListener(ecouteur);
             btnConnecter.setOnClickListener(ecouteur);
             btnDetailsResto.setOnClickListener(ecouteur);
             btnLogout.setOnClickListener(ecouteur);
+            btnInscription.setOnClickListener(ecouteur);
 
 
 
@@ -108,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
             DAOResto.insererResto(resto9);
             DAOResto.insererResto(resto10);
             //le curseur pour afficher ensuite le nombre de Lac dans la base
-            Cursor c = restoBdd.getAll();
+            Cursor c = restoBdd.getAllResto();
             Toast.makeText(getApplicationContext(), "nombre de restaurants dans la bdd : " + c.getCount(), Toast.LENGTH_LONG).show();
             restoBdd.close();
         }

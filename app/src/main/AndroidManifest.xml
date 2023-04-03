@@ -18,6 +18,12 @@
 
         <activity android:name=".controleur.DetailsRestoActivity"
             android:exported="false"/>
+        <activity android:name=".controleur.InscriptionActivity"
+            android:exported="false"/>
+        <activity android:name=".controleur.ConnexionActivity"
+            android:exported="false"/>
+        <activity android:name=".controleur.RéservationActivity"
+            android:exported="false"/>
         <activity
             android:name=".controleur.MainActivity"
             android:exported="true" >

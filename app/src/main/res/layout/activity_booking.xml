@@ -13,7 +13,7 @@
         tools:ignore="MissingConstraints" >
 
         <TextView
-            android:id="@+id/TitreSaisieTemp"
+            android:id="@+id/TitreRéservez"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
@@ -23,14 +23,14 @@
             tools:ignore="MissingConstraints" />
 
         <Spinner
-            android:id="@+id/spinnerSaisieLac"
+            android:id="@+id/spinnerlisteresto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             tools:ignore="MissingConstraints" />
 
         <EditText
-            android:id="@+id/longitude"
+            android:id="@+id/NomEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -38,7 +38,7 @@
             android:textSize="20dp" />
 
         <EditText
-            android:id="@+id/latitude"
+            android:id="@+id/PrenomEdtiText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -90,28 +90,28 @@
                 >
 
                 <RadioButton
-                    android:id="@+id/radioButton6"
+                    android:id="@+id/radioButton12"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="12h" />
 
                 <RadioButton
-                    android:id="@+id/radioButton12"
+                    android:id="@+id/radioButton13"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="13h" />
 
                 <RadioButton
-                    android:id="@+id/radioButton18"
+                    android:id="@+id/radioButton20"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="20h" />
 
                 <RadioButton
-                    android:id="@+id/radioButton24"
+                    android:id="@+id/radioButton21"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -138,14 +138,14 @@
             tools:ignore="MissingConstraints">
 
             <Button
-                android:id="@+id/buttonEnregistrerTemp"
+                android:id="@+id/buttonEnregistrer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Enregistrer" />
 
             <Button
-                android:id="@+id/buttonQuitterSaisieTemp"
+                android:id="@+id/buttonQuitter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"

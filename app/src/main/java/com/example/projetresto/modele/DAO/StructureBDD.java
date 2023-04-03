@@ -2,7 +2,7 @@ package com.example.projetresto.modele.DAO;
 
 public class StructureBDD {
 
-    // Structure de la table resto contenant l'id, le nom et la ville du restaurant
+    // Structure
 
     public static final String TABLE_resto = "tresto";
 
@@ -15,6 +15,18 @@ public class StructureBDD {
     public static final String COL_TYPE_RESTO = "typeRestoR";
 
     public static final String COL_ADRESSE_RESTO = "adresseRestoR";
+
+    public static final String TABLE_utilisateur = "tutilisateur";
+
+    public static  final String COL_EMAIL_UTILISATEUR = "adresseEmail";
+
+    public static final String COL_MDP_UTILISATEUR = "Motdepasse";
+
+    public static final String TABLE_réservation = "tréservation";
+
+    public static final String COL_NOM_UTILISATEUR_RESERVATION = "NomRéservation";
+
+    public static final String COL_PRENOM_UTILISATEUR_RESERVATION = "PrénomRéservation";
 
 
 }

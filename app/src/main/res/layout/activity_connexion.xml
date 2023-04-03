@@ -62,7 +62,7 @@
             <Button
                 android:layout_marginRight="5dp"
                 android:layout_marginLeft="10dp"
-                android:id="@+id/buttonEnregistrerTemp"
+                android:id="@+id/buttonSeConnecterBDD"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -71,7 +71,7 @@
             <Button
                 android:layout_marginRight="10dp"
                 android:layout_marginLeft="5dp"
-                android:id="@+id/buttonQuitterSaisieTemp"
+                android:id="@+id/buttonCreer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"

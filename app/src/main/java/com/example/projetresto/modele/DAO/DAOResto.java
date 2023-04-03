@@ -61,7 +61,7 @@ public class DAOResto extends DAOModele {
     }
 
 
-    public static Cursor getAll() {
+    public static Cursor getAllResto() {
         return db.rawQuery("SELECT * FROM tresto ORDER BY NomR", null);
     }
 

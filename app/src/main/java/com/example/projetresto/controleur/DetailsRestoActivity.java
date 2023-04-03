@@ -34,7 +34,7 @@ public class DetailsRestoActivity extends AppCompatActivity {
         Spinner spinnerAfficheResto = (Spinner) findViewById(R.id.spinnerSaisieResto);
         DAOResto restobdd = new DAOResto(this);
 
-        Cursor c = DAOResto.getAll();
+        Cursor c = DAOResto.getAllResto();
 
         ArrayList<String> lesResto = new ArrayList();
 

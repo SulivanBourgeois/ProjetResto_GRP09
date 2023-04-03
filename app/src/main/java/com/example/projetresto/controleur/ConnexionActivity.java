@@ -28,7 +28,7 @@ public class ConnexionActivity extends AppCompatActivity {
 
             editTextEmail = findViewById(R.id.editTextEmail);
             editTextMotDePasse = findViewById(R.id.editTextMotDePasse);
-            buttonSeConnecter = findViewById(R.id.buttonSeConnecter);
+            buttonSeConnecter = findViewById(R.id.buttonSeConnecterBDD);
 
             // Ouvrir la base de données
             database = openOrCreateDatabase("MaBaseDeDonnees", MODE_PRIVATE, null);
